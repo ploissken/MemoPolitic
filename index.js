@@ -1,7 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
-
+const exphbs  = require('express-handlebars');
 
 // Express
 const app = express();
@@ -11,11 +11,21 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Parse application/json
 app.use(bodyParser.json());
 
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
 
 app.get('/', (req, res) => {
-    const states = ["desligado", "conectado", "conectando", "desconectando"];
-    res.send("Esse Mongo diz que tem");
+     res.render('senator', {
+        senator: require('./391_bio.json')
+    });
 });
+
+app.get('/aecio', (req, res) => {
+    res.json(require('./391_bio.json'))
+});
+
+
 
 // Catches unhandled errors during request handling.
 app.use(function(error, req, res, next) {

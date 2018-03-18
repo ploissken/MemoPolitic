@@ -1,0 +1,37 @@
+{
+	"json-ver": "0.1.0",
+	"extraction-url": "http://www25.senado.leg.br/web/senadores/senador/-/perfil/391",
+	"extraction-datetime": "2018-02-18 14:48:09.118513",
+	"data": {
+		"full-name": "Aécio Neves da Cunha",
+		"pop-name": "FIXME",
+		"birthday": "10/03/1960",
+		"hometown": " Belo Horizonte (MG) ",
+		"picture-url": "http://www.senado.gov.br/senadores/img/fotos-oficiais/senador391.jpg",
+		"national-missions": [
+			{"mission-summary": "Representar o Senado Federal na posse do Excelentíssimo Senhor Fernando Henrique Cardoso como membro da Academia Brasileira de Letras, no Rio de Janeiro-RJ.", "mission-start": "10/09/2013", "mission-end": "", "mission-doc": "RQM 563 / MESA DO SENADO FEDERAL"}
+		],
+		"international-missions": [
+			{"mission-summary": "Participar de missão na Sede do Banco Interamericano de Desenvolvimento - BID, em Washington, D.C., Estados Unidos.", "mission-start": "09/03/2012", "mission-end": " a 15/03/2012", "mission-doc": "RQM 56-M / MESA DO SENADO FEDERAL"},
+			{"mission-summary": "Representar o Senado Federal durante a entrega do Prêmio Personalidade do Ano, em homenagem ao Ex-Presidente Fernando Henrique Cardoso, em Nova York, Estados Unidos.", "mission-start": "10/05/2015", "mission-end": " a 17/05/2015", "mission-doc": "RQM 187 / MESA DO SENADO FEDERAL"},
+			{"mission-summary": "Participar da Comissão Parlamentar Externa Venezuela, conforme RQS 77/2015.", "mission-start": "18/06/2015", "mission-end": "", "mission-doc": "RQM 274 / MESA DO SENADO FEDERAL"},
+			{"mission-summary": "Participar, sem ônus para o Senado Federal, como palestrante no IV Seminário Luso-Brasileiro de Direito, na Faculdade de Direito da Universidade de Lisboa, em Portugal.", "mission-start": "29/03/2016", "mission-end": " a 01/04/2016", "mission-doc": "RQM 101 / MESA DO SENADO FEDERAL"}
+		],
+		"academic-list": [
+			{"course": "Economia", "degree": "Superior", "institution": "PUC", "location": "Belo Horizonte"}
+		],
+		"profession-list": ["Economista"],
+		"past-mandates": [
+			{"mandate-type": "Deputado Federal - MG", "mandate-start": "1987", "mandate-end": "1991"},
+			{"mandate-type": "Deputado Federal - MG", "mandate-start": "1991", "mandate-end": "1995"},
+			{"mandate-type": "Deputado Federal - MG", "mandate-start": "1995", "mandate-end": "1999"},
+			{"mandate-type": "Deputado Federal - MG", "mandate-start": "1999", "mandate-end": "2002"},
+			{"mandate-type": "Governador - MG", "mandate-start": "2003", "mandate-end": "2006"},
+			{"mandate-type": "Governador - MG", "mandate-start": "2007", "mandate-end": "2010"},
+			{"mandate-type": "Senador - MG", "mandate-start": "2011", "mandate-end": ""},
+			{"mandate-type": "Senador", "mandate-start": "2017", "mandate-end": "2019"},
+			{"mandate-type": "Senador", "mandate-start": "2017", "mandate-end": "2019"},
+			{"mandate-type": "Senador", "mandate-start": "2017", "mandate-end": "2019"}
+		]
+	}
+}

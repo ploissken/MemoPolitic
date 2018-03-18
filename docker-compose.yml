@@ -1,0 +1,11 @@
+version: "2"
+services:
+    modafoca:
+        build: .
+        command: gulp serve
+        volumes:
+            # Mounts the project directory to update the host with changes made
+            # inside the container, such as node_modules/ and package-lock.json
+            - './:/usr/modafoca/'
+        ports:
+            - 3000:3000

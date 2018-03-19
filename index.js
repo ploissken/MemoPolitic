@@ -2,6 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const exphbs  = require('express-handlebars');
+const path = require("path");
 
 // Express
 const app = express();
@@ -13,6 +14,8 @@ app.use(bodyParser.json());
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
+
+app.use(express.static(path.join(__dirname, 'semantic')));
 
 
 app.get('/', (req, res) => {

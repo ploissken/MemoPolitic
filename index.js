@@ -16,13 +16,16 @@ app.set('view engine', 'handlebars');
 
 
 app.get('/', (req, res) => {
-     res.render('senator', {
-        senator: require('./391_bio.json')
+     res.render('senator-list', {
+        list: require('./senators-list.json')
     });
 });
 
 app.get('/aecio', (req, res) => {
-    res.json(require('./391_bio.json'))
+    res.render('senator', {
+        senator: require('./391_bio.json'),
+        commissions: require('./391_comm.json')
+    });
 });
 
 

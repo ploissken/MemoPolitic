@@ -1,1 +1,51 @@
-<h1>{{senator.data.full-name}}</h1> eh um cuzao
+<img class="senator-picture" style="float:left; max-width:120px;" src="{{senator.data.picture-url}}"/>
+
+<div class="senator-bio">
+	<h3>{{senator.data.full-name}}<br></h3>
+	{{senator.data.pop-name}}<br>
+	{{senator.data.birthday}}<br>
+	{{senator.data.hometown}}<br>
+
+	{{#each senator.data.academic-list}}
+		{{this.degree}} {{this.course}} {{this.institution}} {{this.location}}<br>
+	{{/each}}
+
+	{{#each senator.data.profession-list}}
+		{{this}}<br>
+	{{/each}}
+</div>
+
+<br><br>
+
+
+<div class="missions">
+	<ul>
+	{{#each senator.data.national-missions}}
+		<li class="mission">
+			{{this.mission-summary}}<br>
+			{{this.mission-start}} {{this.mission-end}}<br>
+			{{this.mission-doc}}<br>
+		</li>
+	{{else}}
+		<li> Nenhuma missaum! </li>
+	{{/each}}
+	</ul>
+
+	<ul>
+	{{#each senator.data.international-missions}}
+		<li class="mission">
+			{{this.mission-summary}}<br>
+			{{this.mission-start}} {{this.mission-end}}<br>
+			{{this.mission-doc}}<br>
+		</li>
+	{{/each}}
+	</ul>
+</div>
+
+<div class="past-mandates">
+	<ul>
+	{{#each senator.data.past-mandates}}
+		<li class="mandate"> {{this.mandate-type}} {{this.mandate-start}} - {{this.mandate-end}}</li>
+	{{/each}}
+	</ul>
+</div>

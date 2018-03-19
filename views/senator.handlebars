@@ -2,14 +2,16 @@
 
 <div class="senator-bio">
 	<h3>{{senator.data.full-name}}<br></h3>
-	{{senator.data.pop-name}}<br>
-	{{senator.data.birthday}}<br>
-	{{senator.data.hometown}}<br>
+	Nome de Guerra: {{senator.data.pop-name}}<br>
+	Nascimento: {{senator.data.birthday}}<br>
+	Cidade natal: {{senator.data.hometown}}<br>
 
+	Informação Acadêmica:
 	{{#each senator.data.academic-list}}
 		{{this.degree}} {{this.course}} {{this.institution}} {{this.location}}<br>
 	{{/each}}
 
+	Profissões declaradas:
 	{{#each senator.data.profession-list}}
 		{{this}}<br>
 	{{/each}}
@@ -19,29 +21,30 @@
 
 
 <div class="missions">
+	<h3>Missões Nacionais</h3>
 	<ul>
 	{{#each senator.data.national-missions}}
 		<li class="mission">
-			{{this.mission-summary}}<br>
-			{{this.mission-start}} {{this.mission-end}}<br>
 			{{this.mission-doc}}<br>
+			{{this.mission-start}} {{this.mission-end}}<br>
+			{{this.mission-summary}}<br>
 		</li>
 	{{else}}
 		<li> Nenhuma missaum! </li>
 	{{/each}}
 	</ul>
-
+	<h3>Missões Internacionais</h3>
 	<ul>
 	{{#each senator.data.international-missions}}
 		<li class="mission">
-			{{this.mission-summary}}<br>
-			{{this.mission-start}} {{this.mission-end}}<br>
 			{{this.mission-doc}}<br>
+			{{this.mission-start}} {{this.mission-end}}<br>
+			{{this.mission-summary}}<br>
 		</li>
 	{{/each}}
 	</ul>
 </div>
-
+<h3>Mandatos Anteriores</h3>
 <div class="past-mandates">
 	<ul>
 	{{#each senator.data.past-mandates}}

@@ -12,11 +12,21 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Parse application/json
 app.use(bodyParser.json());
 
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+// Create `ExpressHandlebars` instance with main layout.
+var hbs = exphbs.create({
+    defaultLayout: 'main',
+    //helpers      : helpers,
+
+    partialsDir: 'views/partials/',
+});
+
+//define menu
+hbs.handlebars.registerPartial('menu', './views/partials/menu.handlebars')
+
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname, 'semantic')));
-
 
 app.get('/', (req, res) => {
      res.render('senator-list', {

@@ -1,11 +1,15 @@
-<h3>Lista de Senadores</h3>
-(ainda linkando soh pro aecim)
+<div class = "ui celled grid">
+	{{> menu}}
+	<div class="row">
+		<h3>Lista de Senadores</h3>
+		(ainda linkando soh pro aecim)
 
-<ul>
-{{#each list.data}}
-	<li><a href="/aecio">{{this.name}}</a> - {{this.party}} ({{this.state}})</li>
-{{else}}
-no data
-{{/each}}
-</ul>
-
+		<ul>
+			{{#each list.data}}
+				<li><a href="/aecio">{{this.name}}</a> - {{this.party}} ({{this.state}})</li>
+			{{else}}
+				no data
+			{{/each}}
+		</ul>
+	</div>
+</div>

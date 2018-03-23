@@ -1,4 +1,5 @@
 <div class = "ui celled grid">
+	{{> menu}}
 	<div class ="twelve column row">
 		<div class="three wide column">
 			<img class="senator-picture" style="clip-path: circle(90px at center)" 
@@ -6,7 +7,12 @@
 		</div>
 
 		<div class="nine wide column">
-			<div class="ui top attached tabular menu">
+
+		</div>
+	</div>
+</div>
+<div class="ui top attached tabular menu">
+			<!-- tab itens -->
 			  <a class="item active" data-tab="first">Biografia</a>
 			  <a class="item" data-tab="second">Missões</a>
 			  <a class="item" data-tab="third">Comissões</a>
@@ -17,7 +23,7 @@
 			<div class="ui bottom attached tab segment active" data-tab="first">
 				<div class="senator-bio">
 					<h3>{{senator.data.full-name}}<br></h3>
-					Nome de Guerra: {{senator.data.pop-name}}<br>
+					<!-- Nome de Guerra: {{senator.data.pop-name}}<br> -->
 					Nascimento: {{senator.data.birthday}}<br>
 					Cidade natal: {{senator.data.hometown}}<br>
 
@@ -108,8 +114,6 @@
 			</div>
 
 		</div>
-	</div>
-</div>
 
 <!-- where should this go? -->
 <script type="text/javascript">

@@ -27,7 +27,8 @@ app.get('/', (req, res) => {
 app.get('/aecio', (req, res) => {
     res.render('senator', {
         senator: require('./391_bio.json'),
-        commissions: require('./391_comm.json')
+        commissions: require('./391_comm.json'),
+        projects: require('./391_proj.json')
     });
 });
 

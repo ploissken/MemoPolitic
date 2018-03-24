@@ -1,125 +1,145 @@
-<div class = "ui celled grid">
-	{{> menu}}
-	<div class ="twelve column row">
-		<div class="three wide column">
-			<img class="senator-picture" style="clip-path: circle(90px at center)" 
-				src="{{senator.data.picture-url}}"/>
+<div class="ui container">
+	<div class = "ui celled grid">
+		<div class ="twelve column row">
+			<div class="three wide column">
+				<img class="ui image senator-jiggle" style="clip-path: circle(90px at center)" src="{{senator.data.picture-url}}"/>
+				<h3>{{senator.data.full-name}}<br></h3>
+			</div>
+
+			<div class="nine wide column">
+				<div class="ui card">
+					<div class="content">
+						<div class="center aligned header">30 anos no poder</div>
+						<br>
+						<div class="center aligned">já custou aos brasileiros</div>
+						<br>
+					    <div class="center aligned header">
+  							<i class="dollar sign icon"></i> 30 bilhões de reais
+						</div>
+					</div>
+				</div>
+
+				<div class="ui card">
+					<div class="center aligned content">
+						<div class="ui tiny red statistic">
+							<div class="value">75%</div>
+							<div class="label">de presença<br>nas sessões</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
 
-		<div class="nine wide column">
+	<div class="ui top attached tabular menu">
+		<!-- tab itens -->
+		<a class="item active" data-tab="first">Biografia</a>
+		<a class="item" data-tab="second">Missões</a>
+		<a class="item" data-tab="third">Comissões</a>
+		<a class="item" data-tab="forth">Mandatos Anteriores</a>
+		<a class="item" data-tab="fifth">Autoria de Projetos</a>
+	</div>
 
+	<!-- tab content -->
+	<div class="ui bottom attached tab segment active" data-tab="first">
+		<div class="senator-bio">
+			
+			<!-- Nome de Guerra: {{senator.data.pop-name}}<br> -->
+			Nascimento: {{senator.data.birthday}}<br>
+			Cidade natal: {{senator.data.hometown}}<br>
+
+			Informação Acadêmica:
+			{{#each senator.data.academic-list}}
+				{{this.degree}} {{this.course}} {{this.institution}} {{this.location}}<br>
+			{{/each}}
+
+			Profissões declaradas:
+			{{#each senator.data.profession-list}}
+				{{this}}<br>
+			{{/each}}
+		</div>
+	</div>
+
+	<div class="ui bottom attached tab segment" data-tab="second">
+		<div class="missions">
+			<h3>Missões Nacionais</h3>
+			<ul>
+				{{#each senator.data.national-missions}}
+				<li class="mission">
+					{{this.mission-doc}}<br>
+					{{this.mission-start}} {{this.mission-end}}<br>
+					{{this.mission-summary}}<br>
+				</li>
+				{{else}}
+					<li> Nenhuma missaum! </li>
+				{{/each}}
+			</ul>
+			<h3>Missões Internacionais</h3>
+			<ul>
+			{{#each senator.data.international-missions}}
+				<li class="mission">
+					{{this.mission-doc}}<br>
+					{{this.mission-start}} {{this.mission-end}}<br>
+					{{this.mission-summary}}<br>
+				</li>
+			{{/each}}
+			</ul>
+		</div>
+	</div>
+
+	<div class="ui bottom attached tab segment" data-tab="third">
+		<h3>Comissões</h3>
+		<ul>
+		{{#each commissions.data}}
+			<li><a href="{{this.comission-link}}">{{this.commision-name}}</a> {{comission-function}} (
+			{{comission-start}} - {{comission-end}})</li>
+		{{/each}}
+		</ul>
+	</div>
+
+	<div class="ui bottom attached tab segment" data-tab="forth">
+		<h3>Mandatos Anteriores</h3>
+		<div class="past-mandates">
+			<ul>
+			{{#each senator.data.past-mandates}}
+				<li class="mandate"> {{this.mandate-type}} {{this.mandate-start}} - {{this.mandate-end}}</li>
+			{{/each}}
+			</ul>
+		</div>
+	</div>
+
+	<div class="ui bottom attached tab segment" data-tab="fifth">
+		<h3>Autoria de Projetos</h3>
+		<div class="projects">
+			<ul>
+			{{#each projects.data}}
+				<li>
+					<div>
+						<a href="{{this.project-link}}">{{this.project-id}}</a> {{this.project-date}} <br>
+						{{this.project-description}} <br>
+						<div class ="ui accordion">
+							<div class="title">
+								<i class="dropdown icon"></i>
+								Autores
+							</div>
+							<div class="content">
+								{{this.project-authors}}
+							</div>
+						</div>
+					</div>
+				</li>
+				<br>
+			{{/each}}
+			</ul>
 		</div>
 	</div>
 </div>
-<div class="ui top attached tabular menu">
-			<!-- tab itens -->
-			  <a class="item active" data-tab="first">Biografia</a>
-			  <a class="item" data-tab="second">Missões</a>
-			  <a class="item" data-tab="third">Comissões</a>
-			  <a class="item" data-tab="forth">Mandatos Anteriores</a>
-			  <a class="item" data-tab="fifth">Autoria de Projetos</a>
-			</div>
-
-			<div class="ui bottom attached tab segment active" data-tab="first">
-				<div class="senator-bio">
-					<h3>{{senator.data.full-name}}<br></h3>
-					<!-- Nome de Guerra: {{senator.data.pop-name}}<br> -->
-					Nascimento: {{senator.data.birthday}}<br>
-					Cidade natal: {{senator.data.hometown}}<br>
-
-					Informação Acadêmica:
-					{{#each senator.data.academic-list}}
-						{{this.degree}} {{this.course}} {{this.institution}} {{this.location}}<br>
-					{{/each}}
-
-					Profissões declaradas:
-					{{#each senator.data.profession-list}}
-						{{this}}<br>
-					{{/each}}
-				</div>
-			</div>
-
-			<div class="ui bottom attached tab segment" data-tab="second">
-				<div class="missions">
-					<h3>Missões Nacionais</h3>
-					<ul>
-					{{#each senator.data.national-missions}}
-						<li class="mission">
-							{{this.mission-doc}}<br>
-							{{this.mission-start}} {{this.mission-end}}<br>
-							{{this.mission-summary}}<br>
-						</li>
-					{{else}}
-						<li> Nenhuma missaum! </li>
-					{{/each}}
-					</ul>
-					<h3>Missões Internacionais</h3>
-					<ul>
-					{{#each senator.data.international-missions}}
-						<li class="mission">
-							{{this.mission-doc}}<br>
-							{{this.mission-start}} {{this.mission-end}}<br>
-							{{this.mission-summary}}<br>
-						</li>
-					{{/each}}
-					</ul>
-				</div>
-			</div>
-
-			<div class="ui bottom attached tab segment" data-tab="third">
-				<h3>Comissões</h3>
-				<ul>
-				{{#each commissions.data}}
-					<li><a href="{{this.comission-link}}">{{this.commision-name}}</a> {{comission-function}} (
-					{{comission-start}} - {{comission-end}})</li>
-				{{/each}}
-				</ul>
-			</div>
-
-			<div class="ui bottom attached tab segment" data-tab="forth">
-				<h3>Mandatos Anteriores</h3>
-				<div class="past-mandates">
-					<ul>
-					{{#each senator.data.past-mandates}}
-						<li class="mandate"> {{this.mandate-type}} {{this.mandate-start}} - {{this.mandate-end}}</li>
-					{{/each}}
-					</ul>
-				</div>
-			</div>
-
-			<div class="ui bottom attached tab segment" data-tab="fifth">
-				<h3>Autoria de Projetos</h3>
-				<div class="projects">
-					<ul>
-					{{#each projects.data}}
-						<li>
-							<div>
-								<a href="{{this.project-link}}">{{this.project-id}}</a> {{this.project-date}} <br>
-								{{this.project-description}} <br>
-								<div class ="ui accordion">
-									<div class="title">
-										<i class="dropdown icon"></i>
-										Autores
-									</div>
-									<div class="content">
-										{{this.project-authors}}
-									</div>
-								</div>
-							</div>
-						</li>
-						<br>
-					{{/each}}
-					</ul>
-				</div>
-			</div>
-
-		</div>
 
 <!-- where should this go? -->
 <script type="text/javascript">
 	$('.menu .item').tab();
 	
-	$('.senator-picture')
+	$('.senator-jiggle')
 	  .transition({
 	    debug     : true,
 	    animation : 'jiggle',

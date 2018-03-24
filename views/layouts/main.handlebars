@@ -10,16 +10,37 @@
 	<script src="/dist/components/tab.js"></script>
 	<script src="/dist/components/accordion.min.js"></script>
 
-    
+    <!-- TODO: create our XML values file -->
+    <!-- title>{{title}}</title -->
     <title>Foca na Foca</title>
+
 </head>
 <body>
 	
-	{{> menu }}
+	{{> main-menu }}
 
 	<div id="main-container" style="margin-top: 7em">
     	{{{body}}}
     </div>
+
+
+
+<!-- TODO: create our own js file -->
+<script type="text/javascript">
+	$('.menu .item').tab();
+	
+	$('.senator-jiggle')
+	  .transition({
+	    debug     : true,
+	    animation : 'jiggle',
+	    duration  : 500,
+	    interval  : 200
+	  });
+
+	$('.ui.accordion')
+	  .accordion()
+	;
+</script>
 
 </body>
 </html>

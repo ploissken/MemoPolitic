@@ -20,8 +20,11 @@ var hbs = exphbs.create({
     partialsDir: 'views/partials/',
 });
 
-//define menu
-hbs.handlebars.registerPartial('menu', './views/partials/menu.handlebars')
+//define partials
+hbs.handlebars.registerPartial('main-menu', './views/partials/main-menu.handlebars')
+hbs.handlebars.registerPartial('senator-info-tab', './views/partials/senator-info-tab.handlebars')
+hbs.handlebars.registerPartial('presence-card', './views/partials/presence-card.handlebars')
+hbs.handlebars.registerPartial('total-cost-card', './views/partials/total-cost-card.handlebars')
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');

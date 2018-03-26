@@ -26,6 +26,55 @@ hbs.handlebars.registerPartial('senator-info-tab', './views/partials/senator-inf
 hbs.handlebars.registerPartial('presence-card', './views/partials/presence-card.handlebars')
 hbs.handlebars.registerPartial('total-cost-card', './views/partials/total-cost-card.handlebars')
 
+//define helpers
+hbs.handlebars.registerHelper('total_resources', function(resources_data){
+    var total = 0.0;
+    for(var i = 0, j=resources_data.length; i < j; i++){
+        total = parseFloat(total) + parseFloat(resources_data[i].total);
+    }
+
+    var currency = (total.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")).toString();
+    currency = currency.replace(".", "#");
+    currency = currency.replace(/,/g, ".")
+    return currency.replace("#", ",")
+
+
+})
+
+hbs.handlebars.registerHelper('senator_salary', function(first_mandate_year){
+    //2007-2011: 16500,00
+    //2011-2014: 26723,13
+    //2015-2018: 33763,00
+
+
+    var cur_year = (new Date()).getFullYear();
+    var total_salary = 0.0;
+    var mandate = parseInt(first_mandate_year);
+    
+    while(mandate < cur_year) {
+        if(mandate >= 2007 && mandate < 2011){
+            total_salary = total_salary + 12 * 16500;
+        }
+
+        if(mandate >= 2011 && mandate < 2014){
+            total_salary = total_salary + 12 * 26723,13;
+        }
+
+        if(mandate >= 2014 && mandate < 2018){
+            total_salary = total_salary + 12 * 33763;
+        }
+
+        mandate = mandate + 1;
+
+    }
+
+    var currency = (total_salary.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")).toString();
+    currency = currency.replace(".", "#");
+    currency = currency.replace(/,/g, ".")
+    return currency.replace("#", ",")
+
+})
+
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
@@ -41,6 +90,7 @@ app.get('/aecio', (req, res) => {
     res.render('senator', {
         senator: require('./391_bio.json'),
         commissions: require('./391_comm.json'),
+        resources: require('./391_resources.json'),
         projects: require('./391_proj.json')
     });
 });

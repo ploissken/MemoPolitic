@@ -1,0 +1,15 @@
+<h3>Lista de Senadores</h3>
+<table class="ui very basic collapsing selectable celled table" id="senator-list-table">
+  <thead>
+    <tr><th>Nome</th>
+    <th>Partido</th>
+    <th>Estado</th>
+  </tr></thead>
+  <tbody>
+	{{#each senatorList.data}}
+		<tr><td><a href="/">{{this.name}}</a></td><td>{{this.party}}</td><td>{{this.state}}</td></tr>
+	{{else}}
+		no data
+	{{/each}}
+  </tbody>
+</table>

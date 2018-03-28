@@ -1,20 +1,7 @@
 <div class="ui container" id="senator-content">
 	<div class="ui grid">
 		<div class="four wide column">
-			<div class = "ui grid">
-				<div class="row">
-					<h3>Lista de Senadores</h3>
-				</div>
-				<div class="row">
-					<ul>
-						{{#each senatorList.data}}
-							<li><a href="/">{{this.name}}</a> - {{this.party}} ({{this.state}})</li>
-						{{else}}
-							no data
-						{{/each}}
-					</ul>
-				</div>
-			</div>
+			{{> senator-list}}
 		</div>
 		<div class="twelve wide column">
 			<div class="ui sticky">
@@ -28,17 +15,6 @@
 			</div>
 		</div>
 	</div>
-
-
-
-
-
-
-
-
-
-
-
 </div>
 
 

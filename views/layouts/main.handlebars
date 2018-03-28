@@ -10,6 +10,7 @@
 	<script src="/dist/components/tab.js"></script>
 	<script src="/dist/components/accordion.min.js"></script>
 
+
     <!-- TODO: create our XML values file -->
     <!-- title>{{title}}</title -->
     <title>Foca na Foca</title>
@@ -37,10 +38,25 @@
 	    interval  : 200
 	  });
 
+	$('.ui.sticky')
+	  .sticky()
+	;
+
 	$('.ui.accordion')
 	  .accordion()
 	;
 </script>
+
+<!-- famosa gambiarra -->
+<style>
+
+	.ui.fixed.sticky {
+	  padding-top: 7em;
+	}
+</style>
+
+
+
 
 </body>
 </html>

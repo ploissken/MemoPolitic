@@ -138,13 +138,8 @@ app.set('view engine', 'handlebars');
 app.use(express.static(path.join(__dirname, 'semantic')));
 
 app.get('/', (req, res) => {
-     res.render('senator-list', {
-        list: require('./senators-list.json')
-    });
-});
-
-app.get('/aecio', (req, res) => {
     res.render('senator', {
+        senatorList: require('./senators-list.json'),
         senator: require('./391_bio.json'),
         commissions: require('./391_comm.json'),
         resources: require('./391_resources.json'),

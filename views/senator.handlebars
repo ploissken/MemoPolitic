@@ -1,12 +1,44 @@
-<div class="ui container">
-	<div class = "ui stackable four column grid">
-		{{> candidate-card}}
-		{{> total-cost-card }}
-		{{> hired-ppl-card }}
-		{{> presence-card }}
+<div class="ui container" id="senator-content">
+	<div class="ui grid">
+		<div class="four wide column">
+			<div class = "ui grid">
+				<div class="row">
+					<h3>Lista de Senadores</h3>
+				</div>
+				<div class="row">
+					<ul>
+						{{#each senatorList.data}}
+							<li><a href="/aecio">{{this.name}}</a> - {{this.party}} ({{this.state}})</li>
+						{{else}}
+							no data
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="twelve wide column">
+			<div class="ui sticky">
+				<div class = "ui grid">
+					{{> candidate-card}}
+					{{> total-cost-card }}
+					{{> hired-ppl-card }}
+					{{> presence-card }}
+				</div>
+				{{> senator-info-tab }}
+			</div>
+		</div>
 	</div>
 
-	{{> senator-info-tab }}
+
+
+
+
+
+
+
+
+
+
 </div>
 
 

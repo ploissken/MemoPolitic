@@ -78,24 +78,29 @@ hbs.handlebars.registerHelper('hired_ppl', function(resources_data){
 
     //sum hired ppl by year
     var list = ""
+    var total = 0;
     for(var i = 0, j = unique_year_list.length; i<j; i++){
-        var total = 0;
-        
+        var yearTotal = 0;
 
         //for each resource
         for(var ii = 0, jj=resources_data.length; ii < jj; ii++){          
             var r = resources_data[ii];
-            if(r.type == "people" && r.year == unique_year_list[i] && r.description != "Gabinete" && r.description != "Escritório(s) de Apoio"){
+            if(r.type == "people" && r.year == unique_year_list[i] && 
+                r.description != "Gabinete" && r.description != "Escritório(s) de Apoio"){
                 var v = resources_data[ii].value.replace("['", "");
-                total = total + parseInt(v.replace("']", ""));
+                yearTotal = yearTotal + parseInt(v.replace("']", ""));
             }
-        } 
+        }
+
+        total = total + yearTotal;
 
         list = list + "<b>" + unique_year_list[i] + "</b><br>" + total + " pessoas <br>";
     }
 
+    var m = Math.round(total / unique_year_list.length);
+    return "" + m;
 
-    return list;
+    //return list;
 })
 
 hbs.handlebars.registerHelper('senator_salary', function(first_mandate_year){

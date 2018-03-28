@@ -1,17 +1,9 @@
 <div class="ui container">
-	<div class = "ui celled grid">
-		<div class ="twelve column row">
-			<div class="three wide column">
-				<img class="ui image senator-jiggle" style="clip-path: circle(90px at center)" src="{{senator.data.picture-url}}"/>
-				<h3>{{senator.data.full-name}}<br></h3>
-			</div>
-
-			<div class="nine wide column">
-				{{> total-cost-card }}
-				{{> hired-ppl-card }}
-				{{> presence-card }}
-			</div>
-		</div>
+	<div class = "ui stackable four column grid">
+		{{> candidate-card}}
+		{{> total-cost-card }}
+		{{> hired-ppl-card }}
+		{{> presence-card }}
 	</div>
 
 	{{> senator-info-tab }}

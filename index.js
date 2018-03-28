@@ -23,6 +23,7 @@ var hbs = exphbs.create({
 //define partials
 hbs.handlebars.registerPartial('main-menu', './views/partials/main-menu.handlebars')
 hbs.handlebars.registerPartial('senator-info-tab', './views/partials/senator-info-tab.handlebars')
+hbs.handlebars.registerPartial('candidate-card', './views/partials/candidate-card.handlebars')
 hbs.handlebars.registerPartial('presence-card', './views/partials/presence-card.handlebars')
 hbs.handlebars.registerPartial('total-cost-card', './views/partials/total-cost-card.handlebars')
 hbs.handlebars.registerPartial('hired-ppl-card', './views/partials/hired-ppl-card.handlebars')

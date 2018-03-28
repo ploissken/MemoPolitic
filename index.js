@@ -25,20 +25,68 @@ hbs.handlebars.registerPartial('main-menu', './views/partials/main-menu.handleba
 hbs.handlebars.registerPartial('senator-info-tab', './views/partials/senator-info-tab.handlebars')
 hbs.handlebars.registerPartial('presence-card', './views/partials/presence-card.handlebars')
 hbs.handlebars.registerPartial('total-cost-card', './views/partials/total-cost-card.handlebars')
+hbs.handlebars.registerPartial('hired-ppl-card', './views/partials/hired-ppl-card.handlebars')
 
 //define helpers
-hbs.handlebars.registerHelper('total_resources', function(resources_data){
+hbs.handlebars.registerHelper('cotas_resources', function(resources_data){
     var total = 0.0;
     for(var i = 0, j=resources_data.length; i < j; i++){
-        total = parseFloat(total) + parseFloat(resources_data[i].total);
+        if(resources_data[i].type == "ceap"){
+            total = parseFloat(total) + parseFloat(resources_data[i].value);    
+        }
+        
     }
 
     var currency = (total.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")).toString();
     currency = currency.replace(".", "#");
-    currency = currency.replace(/,/g, ".")
-    return currency.replace("#", ",")
+    currency = currency.replace(/,/g, ".");
+    return currency.replace("#", ",");
+})
+hbs.handlebars.registerHelper('other_resources', function(resources_data){
+    var total = 0.0;
+    for(var i = 0, j=resources_data.length; i < j; i++){
+        if(resources_data[i].type == "other"){
+            total = parseFloat(total) + parseFloat(resources_data[i].value);    
+        }
+        
+    }
+
+    var currency = (total.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,")).toString();
+    currency = currency.replace(".", "#");
+    currency = currency.replace(/,/g, ".");
+    return currency.replace("#", ",");
+})
+
+hbs.handlebars.registerHelper('hired_ppl', function(resources_data){
+    
+    class HiredByYear {
+        constructor(year) {
+            this.year = year;
+            this.gabinete = 0;
+        }
+
+        addToGabinete(value){
+            this.gabinete += value;
+        }
+
+        getGabineteTotal(){
+            return this.gabinete;
+        }
+    }
 
 
+    var list = ""
+    for(var i = 0, j=resources_data.length; i < j; i++){
+        if(resources_data[i].type == "people" && resources_data[i].description == "Gabinete"){
+            list = list + resources_data[i].description + " " + resources_data[i].value.replace("['", "") + " (" + resources_data[i].year + ") <br>";
+        }
+        if(resources_data[i].type == "people" && resources_data[i].description == "Escritório(s) de Apoio"){
+            list = list + resources_data[i].description + " " + resources_data[i].value + " (" + resources_data[i].year + ") <br>";
+        }
+    }
+    list = list + "";
+
+    return list;
 })
 
 hbs.handlebars.registerHelper('senator_salary', function(first_mandate_year){

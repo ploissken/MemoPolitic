@@ -58,33 +58,41 @@ hbs.handlebars.registerHelper('other_resources', function(resources_data){
 })
 
 hbs.handlebars.registerHelper('hired_ppl', function(resources_data){
-    
-    class HiredByYear {
-        constructor(year) {
-            this.year = year;
-            this.gabinete = 0;
-        }
-
-        addToGabinete(value){
-            this.gabinete += value;
-        }
-
-        getGabineteTotal(){
-            return this.gabinete;
-        }
+    //helper function to remove duplicates
+    function onlyUnique(value, index, self) { 
+        return self.indexOf(value) === index;
     }
 
+    var years = [];
 
-    var list = ""
+    //grab all (with duplicate) mandate years
     for(var i = 0, j=resources_data.length; i < j; i++){
-        if(resources_data[i].type == "people" && resources_data[i].description == "Gabinete"){
-            list = list + resources_data[i].description + " " + resources_data[i].value.replace("['", "") + " (" + resources_data[i].year + ") <br>";
-        }
-        if(resources_data[i].type == "people" && resources_data[i].description == "Escritório(s) de Apoio"){
-            list = list + resources_data[i].description + " " + resources_data[i].value + " (" + resources_data[i].year + ") <br>";
-        }
+        years.push(resources_data[i].year);
     }
-    list = list + "";
+
+    //remove duplicates and sort
+    var unique_year_list = years.filter(onlyUnique);
+    unique_year_list.sort();
+
+
+    //sum hired ppl by year
+    var list = ""
+    for(var i = 0, j = unique_year_list.length; i<j; i++){
+        var total = 0;
+        
+
+        //for each resource
+        for(var ii = 0, jj=resources_data.length; ii < jj; ii++){          
+            var r = resources_data[ii];
+            if(r.type == "people" && r.year == unique_year_list[i] && r.description != "Gabinete" && r.description != "Escritório(s) de Apoio"){
+                var v = resources_data[ii].value.replace("['", "");
+                total = total + parseInt(v.replace("']", ""));
+            }
+        } 
+
+        list = list + "<b>" + unique_year_list[i] + "</b><br>" + total + " pessoas <br>";
+    }
+
 
     return list;
 })

@@ -39,11 +39,11 @@ hbs.handlebars.registerPartial('hired-ppl-card', './views/partials/hired-ppl-car
 //define helpers
 hbs.handlebars.registerHelper('awards_generate', function(resources_data){
     var awardList = ""
-    var award1 = "<i class='big gem outline icon'></i><br>";
-    var award2 = "<i class='big trophy icon'></i><br>";
-    var award3 = "<i class='big paw icon'></i><br>";
+    var award1 = "<i class='the-target large circular inverted gem outline icon'></i><br>";
+    var award2 = "<i class='the-target large circular inverted trophy icon'></i><br>";
+    var award3 = "<i class='the-target large circular inverted paw icon'></i><br>";
 
-    var divOpen = "<div class='column'><div class='ui center aligned circular segment'>";
+    var divOpen = "<div class='column'><div class='ui basic center aligned segment with-popup' data-content='trophy explanation'>";
 
     var divClose = "</div></div>"
 

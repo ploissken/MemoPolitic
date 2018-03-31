@@ -37,6 +37,24 @@ hbs.handlebars.registerPartial('hired-ppl-card', './views/partials/hired-ppl-car
 
 
 //define helpers
+hbs.handlebars.registerHelper('awards_generate', function(resources_data){
+    var awardList = ""
+    var award1 = "<i class='big gem outline icon'></i><br>";
+    var award2 = "<i class='big trophy icon'></i><br>";
+    var award3 = "<i class='big paw icon'></i><br>";
+
+    var divOpen = "<div class='column'><div class='ui center aligned circular segment'>";
+
+    var divClose = "</div></div>"
+
+    for(var i = 0; i < 3; i++){
+        awardList = awardList + divOpen + award1 + "bling bling bling" + divClose;
+        awardList = awardList + divOpen + award2 + "grande champ" + divClose;
+        awardList = awardList + divOpen + award3 + "pet lover s2" + divClose;
+    }
+    return awardList;
+});
+
 hbs.handlebars.registerHelper('cotas_resources', function(resources_data){
     var total = 0.0;
     for(var i = 0, j=resources_data.length; i < j; i++){

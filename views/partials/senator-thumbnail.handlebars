@@ -1,0 +1,23 @@
+<div class="four wide column">
+	<div class="ui card">
+		<div class="content">
+			<img class="ui image senator-jiggle" style="max-width: 150px; clip-path: circle(100px at center)" 
+				src="{{senator.data.picture-url}}"/>
+			<br><br>
+			<div class="left aligned ">
+				<!-- Nome de Guerra: {{senator.data.pop-name}}<br> -->
+				(X anos) {{senator.data.birthday}}<br>
+				Nascido em {{senator.data.hometown}}<br>
+
+				<!-- Informação Acadêmica:
+				{{#each senator.data.academic-list}}
+					{{this.degree}} {{this.course}} {{this.institution}} {{this.location}}<br>
+				{{/each}} -->
+
+				{{#each senator.data.profession-list}}
+					{{this}}  
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</div>

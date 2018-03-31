@@ -1,0 +1,23 @@
+	<h3>Autoria de Projetos</h3>
+	<div class="projects">
+		<ul>
+		{{#each projects.data}}
+			<li>
+				<div>
+					<a href="{{this.project-link}}">{{this.project-id}}</a> {{this.project-date}} <br>
+					{{this.project-description}} <br>
+					<div class ="ui accordion">
+						<div class="title">
+							<i class="dropdown icon"></i>
+							Autores
+						</div>
+						<div class="content">
+							{{this.project-authors}}
+						</div>
+					</div>
+				</div>
+			</li>
+			<br>
+		{{/each}}
+		</ul>
+	</div>

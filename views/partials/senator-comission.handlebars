@@ -1,0 +1,7 @@
+	<h3>Comissões</h3>
+	<ul>
+	{{#each commissions.data}}
+		<li><a href="{{this.comission-link}}">{{this.commision-name}}</a> {{comission-function}} (
+		{{comission-start}} - {{comission-end}})</li>
+	{{/each}}
+	</ul>

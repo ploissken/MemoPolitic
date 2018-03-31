@@ -1,0 +1,24 @@
+	<div class="missions">
+		<h3>Missões Nacionais</h3>
+		<ul>
+			{{#each senator.data.national-missions}}
+			<li class="mission">
+				{{this.mission-doc}}<br>
+				{{this.mission-start}} {{this.mission-end}}<br>
+				{{this.mission-summary}}<br>
+			</li>
+			{{else}}
+				<li> Nenhuma missaum! </li>
+			{{/each}}
+		</ul>
+		<h3>Missões Internacionais</h3>
+		<ul>
+		{{#each senator.data.international-missions}}
+			<li class="mission">
+				{{this.mission-doc}}<br>
+				{{this.mission-start}} {{this.mission-end}}<br>
+				{{this.mission-summary}}<br>
+			</li>
+		{{/each}}
+		</ul>
+	</div>

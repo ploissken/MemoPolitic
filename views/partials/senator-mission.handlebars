@@ -1,4 +1,7 @@
-	<div class="missions">
+<div class="ui grid">
+	{{> senator-mission-card }}
+
+	<div class="twelve wide column">
 		<h3>Missões Nacionais</h3>
 		<ul>
 			{{#each senator.data.national-missions}}
@@ -22,3 +25,4 @@
 		{{/each}}
 		</ul>
 	</div>
+</div>

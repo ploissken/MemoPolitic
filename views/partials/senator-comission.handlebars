@@ -1,7 +1,13 @@
-	<h3>Comissões</h3>
-	<ul>
-	{{#each commissions.data}}
-		<li><a href="{{this.comission-link}}">{{this.commision-name}}</a> {{comission-function}} (
-		{{comission-start}} - {{comission-end}})</li>
-	{{/each}}
-	</ul>
+<div class="ui grid" >
+	{{> senator-comission-card }}
+
+	<div class="twelve wide column" >
+		<h3>Comissões</h3>
+		<ul>
+		{{#each commissions.data}}
+			<li><a href="{{this.comission-link}}">{{this.commision-name}}</a> {{comission-function}} (
+			{{comission-start}} - {{comission-end}})</li>
+		{{/each}}
+		</ul>
+	</div>
+</div>

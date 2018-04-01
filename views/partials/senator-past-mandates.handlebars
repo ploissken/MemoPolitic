@@ -1,8 +1,14 @@
-<h3>Mandatos Anteriores</h3>
-	<div class="past-mandates">
-		<ul>
-		{{#each senator.data.past-mandates}}
-			<li class="mandate"> {{this.mandate-type}} {{this.mandate-start}} - {{this.mandate-end}}</li>
-		{{/each}}
-		</ul>
+<div class="ui grid">
+	{{> senator-mandates-card }}
+
+	<div class="twelve wide column">
+		<h3>Mandatos Anteriores</h3>
+		<div class="past-mandates">
+			<ul>
+			{{#each senator.data.past-mandates}}
+				<li class="mandate"> {{this.mandate-type}} {{this.mandate-start}} - {{this.mandate-end}}</li>
+			{{/each}}
+			</ul>
+		</div>
 	</div>
+</div>

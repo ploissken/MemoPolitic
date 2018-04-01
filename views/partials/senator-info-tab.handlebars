@@ -1,4 +1,4 @@
-<div class="ui top attached tabular menu">
+<div class="ui pointing secondary menu">
 	<!-- tab itens -->
 	<a class="item active" data-tab="first">{{senator.data.full-name}}</a>
 	<a class="item" data-tab="second">Missões</a>
@@ -8,22 +8,22 @@
 </div>
 
 <!-- tab content -->
-<div class="ui bottom attached tab segment active" data-tab="first">
+<div class="ui tab active" data-tab="first">
 	{{> senator-bio}}
 </div>
 
-<div class="ui bottom attached tab segment" data-tab="second">
+<div class="ui tab " data-tab="second">
 	{{> senator-mission}}
 </div>
 
-<div class="ui bottom attached tab segment" data-tab="third">
+<div class="ui tab " data-tab="third">
 	{{> senator-comission}}
 </div>
 
-<div class="ui bottom attached tab segment" data-tab="forth">
+<div class="ui tab " data-tab="forth">
 	{{> senator-past-mandates}}
 </div>
 
-<div class="ui bottom attached tab segment" data-tab="fifth">
+<div class="ui tab " data-tab="fifth">
 	{{> senator-projects}}
 </div>

@@ -27,16 +27,25 @@ hbs.handlebars.registerPartial('senator-info-tab', './views/partials/senator-inf
 hbs.handlebars.registerPartial('senator-thumbnail', './views/partials/senator-thumbnail.handlebars')
 hbs.handlebars.registerPartial('senator-bio', './views/partials/senator-bio.handlebars')
 hbs.handlebars.registerPartial('senator-mission', './views/partials/senator-mission.handlebars')
+hbs.handlebars.registerPartial('senator-mission-card', './views/partials/senator-mission-card.handlebars')
 hbs.handlebars.registerPartial('senator-awards', './views/partials/senator-awards.handlebars')
 hbs.handlebars.registerPartial('senator-comission', './views/partials/senator-comission.handlebars')
+hbs.handlebars.registerPartial('senator-comission-card', './views/partials/senator-comission-card.handlebars')
 hbs.handlebars.registerPartial('senator-past-mandate', './views/partials/senator-past-mandate.handlebars')
 hbs.handlebars.registerPartial('senator-projects', './views/partials/senator-projects.handlebars')
+hbs.handlebars.registerPartial('senator-mandates-card', './views/partials/senator-mandates-card.handlebars')
 hbs.handlebars.registerPartial('presence-card', './views/partials/presence-card.handlebars')
 hbs.handlebars.registerPartial('total-cost-card', './views/partials/total-cost-card.handlebars')
 hbs.handlebars.registerPartial('hired-ppl-card', './views/partials/hired-ppl-card.handlebars')
 
 
 //define helpers
+hbs.handlebars.registerHelper('missions_lenght', function(missions){
+    //var national = senator_data.national-missions.length;
+    //var international = senator_data.international-missions.length;
+    return missions.length + "";
+})
+
 hbs.handlebars.registerHelper('awards_generate', function(resources_data){
     var awardList = ""
     var award1 = "<i class='the-target large circular inverted gem outline icon'></i><br>";

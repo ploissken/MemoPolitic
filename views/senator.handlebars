@@ -1,11 +1,16 @@
 <div class="ui container" id="senator-content">
 	<div class="ui grid">
-		<div class="four wide column" id="context">
+		<div class="computer only four wide column" id="context">
 			{{> senator-list}}
 		</div>
-		<div class="twelve wide column">
+		<div class="computer only twelve wide column">
 			<div class="ui sticky">
-				{{> senator-info-tab }}
+				{{> senator-tab }}
+			</div>
+		</div>
+		<div class="mobile only sixteen wide column">
+			<div style="padding-top:3em">
+				{{> senator-tab }}
 			</div>
 		</div>
 	</div>

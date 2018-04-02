@@ -2,7 +2,7 @@
 	"data": [
 			{"partial": "main-menu"},
 			{"partial": "senator-list"},
-			{"partial": "senator-info-tab"},
+			{"partial": "senator-tab"},
 			{"partial": "senator-thumbnail"},
 			{"partial": "senator-bio"},
 			{"partial": "senator-mission"},

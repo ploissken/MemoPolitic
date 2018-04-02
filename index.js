@@ -21,23 +21,13 @@ var hbs = exphbs.create({
 });
 
 //define partials
-hbs.handlebars.registerPartial('main-menu', './views/partials/main-menu.handlebars')
-hbs.handlebars.registerPartial('senator-list', './views/partials/senator-list.handlebars')
-hbs.handlebars.registerPartial('senator-info-tab', './views/partials/senator-info-tab.handlebars')
-hbs.handlebars.registerPartial('senator-thumbnail', './views/partials/senator-thumbnail.handlebars')
-hbs.handlebars.registerPartial('senator-bio', './views/partials/senator-bio.handlebars')
-hbs.handlebars.registerPartial('senator-mission', './views/partials/senator-mission.handlebars')
-hbs.handlebars.registerPartial('senator-mission-card', './views/partials/senator-mission-card.handlebars')
-hbs.handlebars.registerPartial('senator-awards', './views/partials/senator-awards.handlebars')
-hbs.handlebars.registerPartial('senator-comission', './views/partials/senator-comission.handlebars')
-hbs.handlebars.registerPartial('senator-comission-card', './views/partials/senator-comission-card.handlebars')
-hbs.handlebars.registerPartial('senator-past-mandate', './views/partials/senator-past-mandate.handlebars')
-hbs.handlebars.registerPartial('senator-projects', './views/partials/senator-projects.handlebars')
-hbs.handlebars.registerPartial('senator-mandates-card', './views/partials/senator-mandates-card.handlebars')
-hbs.handlebars.registerPartial('presence-card', './views/partials/presence-card.handlebars')
-hbs.handlebars.registerPartial('total-cost-card', './views/partials/total-cost-card.handlebars')
-hbs.handlebars.registerPartial('hired-ppl-card', './views/partials/hired-ppl-card.handlebars')
-
+var ps = require('./views/partials/partials.json')
+ps.data.forEach(function(el, index) {
+    // el - current element, i - index
+    console.log(el.partial)
+    var psPath = "./views/partials/" + el.partial + ".handlebars"
+    hbs.handlebars.registerPartial(el.partial, psPath)
+});
 
 //define helpers
 hbs.handlebars.registerHelper('missions_lenght', function(missions){

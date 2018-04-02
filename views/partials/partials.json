@@ -1,0 +1,39 @@
+{
+	"data": [
+			{"partial": "main-menu"},
+			{"partial": "senator-list"},
+			{"partial": "senator-info-tab"},
+			{"partial": "senator-thumbnail"},
+			{"partial": "senator-bio"},
+			{"partial": "senator-mission"},
+			{"partial": "senator-mission-card"},
+			{"partial": "senator-awards"},
+			{"partial": "senator-comission"},
+			{"partial": "senator-comission-card"},
+			{"partial": "senator-past-mandate "},
+			{"partial": "senator-projects"},
+			{"partial": "senator-mandates-card"},
+			{"partial": "presence-card"},
+			{"partial": "hired-ppl-card"},
+			{"partial": "total-cost-card"}
+	]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

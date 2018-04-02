@@ -42,7 +42,7 @@ app.set('view engine', 'handlebars');
 
 app.use(express.static(path.join(__dirname, 'semantic')));
 
-app.get('/', (req, res) => {
+app.get('/aecim', (req, res) => {
     res.render('senator', {
         senatorList: require('./senators-list.json'),
         senator: require('./391_bio.json'),
@@ -52,6 +52,25 @@ app.get('/', (req, res) => {
     });
 });
 
+app.get('/', (req, res) => {
+    res.render('senator', {
+        senatorList: require('./senators-list.json'),
+        senator: require('./3398_bio.json'),
+        commissions: require('./3398_comm.json'),
+        resources: require('./3398_resources.json'),
+        projects: require('./3398_proj.json')
+    });
+});
+
+app.get('/senador/:tagId', (req, res) => {
+    res.render('senator', {
+        senatorList: require('./senators-list.json'),
+        senator: require('./json/bio/' + req.params.tagId + '.json'),
+        commissions: require('./json/comission/' + req.params.tagId + '.json'),
+        resources: require('./json/resources/' + req.params.tagId + '.json'),
+        projects: require('./json/projects/' + req.params.tagId + '.json')
+    });
+});
 
 
 // Catches unhandled errors during request handling.

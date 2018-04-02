@@ -1,0 +1,56 @@
+{
+	"json-ver": "0.1.0",
+	"extraction-url": "https://www25.senado.leg.br/web/senadores/senador/-/perfil/3398",
+	"extraction-datetime": "2018-04-01 23:14:16.997256",
+	"data": {
+		"full-name": "Cristovam Ricardo Cavalcanti Buarque",
+		"pop-name": "FIXME",
+		"birthday": "20/02/1944",
+		"hometown": " Recife (PE) ",
+		"picture-url": "http://www.senado.gov.br/senadores/img/fotos-oficiais/senador3398.jpg",
+		"national-missions": [
+			{"mission-summary": "Homenagens póstumas que serão prestadas ao ex-Governador Leonel Brizola em Porto Alegre e para os funerais a serem realizados em São Borja, no Rio Grande do Sul.", "mission-start": "23/06/2004", "mission-end": "", "mission-doc": "FAL / MESA DO SENADO FEDERAL"},
+			{"mission-summary": "Conferência Ancara - Istambul, sobre Islã, Latinidade e Transmodernidade, na Universidade de Bilkent.", "mission-start": "10/04/2005", "mission-end": " a 18/04/2005", "mission-doc": "RQM 0102 / MESA DO SENADO FEDERAL"},
+			{"mission-summary": "Participar de Comissão Externa do Senado Federal na Conferência das Nações Unidas sobre Desenvolvimento Sustentável - Rio+20, no Rio de Janeiro - RJ", "mission-start": "15/06/2012", "mission-end": " a 21/06/2012", "mission-doc": "RQM 284-M / MESA DO SENADO FEDERAL"}
+		],
+		"international-missions": [
+			{"mission-summary": "Comparecer a compromissosaos seguintes compromissos, a convite, sem ônus para o Senado Federal: Alexandria/Egito, no período de 11 a 18/04; Kwait, no período de 18 a 20/04/2004; Teerã/Irã, no período de 20 a 23/04/2004.", "mission-start": "11/04/2004", "mission-end": " a 23/04/2004", "mission-doc": "RQS 414 / PLENÁRIO DO SENADO FEDERAL"},
+			{"mission-summary": "Posse no Conselho de Administração do Instituto de Educação da Unesco e participação na 50ª Sessão do Editorial Board da 'International Review of Education', do Instituto de Educação da Unesco.", "mission-start": "02/05/2004", "mission-end": " a 07/05/2004", "mission-doc": "RQM 156 / MESA DO SENADO FEDERAL"},
+			{"mission-summary": "Participar da Conferência de Xangai para redução da pobreza em escala mundial, promovida pelo Banco Mundial.", "mission-start": "19/05/2004", "mission-end": " a 28/05/2004", "mission-doc": "RQM 156 / MESA DO SENADO FEDERAL"},
+			{"mission-summary": "Reunião do Conselho de Representantes e da Junta Executiva do South Centre, em Genebra. Viagem à República do Quênia, atendendo convite do UNICEF.", "mission-start": "17/07/2004", "mission-end": " a 21/07/2004", "mission-doc": "RQM 295 / MESA DO SENADO FEDERAL"},
+			{"mission-summary": "Reunião Plenária do VI Foro de Equidade Social, em Washington.", "mission-start": "30/07/2004", "mission-end": " a 03/08/2004", "mission-doc": "RQM 296 / MESA DO SENADO FEDERAL"},
+			{"mission-summary": "Palestra no VIII Congresso Luso-Afro-Brasileiro de Ciências Sociais.", "mission-start": "16/09/2004", "mission-end": " a 18/09/2004", "mission-doc": "RQM 344 / MESA DO SENADO FEDERAL"},
+			{"mission-summary": "Palestra no 'Rio Branco Fórum on Brazil', em Berkeley, além de participar de reunião com líderes políticos e empresariais, em Oakland.", "mission-start": "01/11/2004", "mission-end": " a 07/11/2004", "mission-doc": "RQM 391 / MESA DO SENADO FEDERAL"},
+			{"mission-summary": "Palestra sobre 'Características do programa brasileiro e sua evolução no tempo (Bolsa Escola - Bolsa Família), no âmbito do Seminário presidencial e reunião técnica de alto nível para discutir experiências regionais no desenho e implantação de programas de transferências condicionadas, promovido pelo Banco Interamericano de Desenvolvimento, em Lima - Peru.", "mission-start": "20/11/2004", "mission-end": " a 23/11/2004", "mission-doc": "RQM 433 / MESA DO SENADO FEDERAL"},
+			{"mission-summary": "Fórum organizado pela OIT, sobre o combate ao trabalho infantil e educação, em Buenos Aires, Argentina.", "mission-start": "05/09/2005", "mission-end": " a 06/09/2005", "mission-doc": "RQM 0395 / MESA DO SENADO FEDERAL"},
+			{"mission-summary": "Marcha Global contra o Trabalho Infantil, e Painel prévio da Cúpula do Milênio, em Nova Iorque, Estados Unidos.", "mission-start": "12/09/2005", "mission-end": " a 14/09/2005", "mission-doc": "RQM 0406 / MESA DO SENADO FEDERAL"},
+			{"mission-summary": "12º Colóquio Internacional, que abordará o tema Latinidade e Identidade Haitiense: entre a tradição e a modernidade, em Porto Príncipe-Haiti.", "mission-start": "15/09/2005", "mission-end": " a 18/09/2005", "mission-doc": "RQM 0396 / MESA DO SENADO FEDERAL"},
+			{"mission-summary": "Congresso Internacional de Educação, em Caracas, Venezuela.", "mission-start": "21/09/2005", "mission-end": " a 23/09/2005", "mission-doc": "RQM 0403 / MESA DO SENADO FEDERAL"},
+			{"mission-summary": "Fórum Parlamentar Mundial do Quênia - 2007, em Nairobi - Quênia.", "mission-start": "19/01/2007", "mission-end": " a 25/01/2007", "mission-doc": "RQS 1329 / PLENÁRIO DO SENADO FEDERAL"},
+			{"mission-summary": "Sessão de instalação e posse do Parlamento do Mercosul - Montevidéu - Uruguai", "mission-start": "06/05/2007", "mission-end": " a 09/05/2007", "mission-doc": "RQS 0443 / PLENÁRIO DO SENADO FEDERAL"},
+			{"mission-summary": "Segunda Sessão do Parlamento do Mercosul - Montevidéu, Uruguai", "mission-start": "24/06/2007", "mission-end": " a 27/06/2007", "mission-doc": "RQS 0707 / PLENÁRIO DO SENADO FEDERAL"},
+			{"mission-summary": "Participação 6ª Sessão do Parlamento do Mercosul, Uruguai. Participação apenas do Senador Geraldo Mesquita Júnior também na reunião sobre a criação de fórum sobre o Mercosul em Cochabamba, Bolívia.", "mission-start": "08/10/2007", "mission-end": " a 09/10/2007", "mission-doc": "RQS 1096 / PLENÁRIO DO SENADO FEDERAL"},
+			{"mission-summary": "Participação na Oitava Sessão do Parlamento do Mercosul - Montevidéu, Uruguai.", "mission-start": "30/03/2008", "mission-end": " a 01/04/2008", "mission-doc": "RQS 0304 / PLENÁRIO DO SENADO FEDERAL"},
+			{"mission-summary": "Participação na Nona Sessão do Parlamento do Mercosul, em Montevidéu, Uruguai.", "mission-start": "27/04/2008", "mission-end": " a 28/04/2008", "mission-doc": "RQS 0497 / PLENÁRIO DO SENADO FEDERAL"},
+			{"mission-summary": "Participação na XII Sessão do Parlamento do Mercosul, em Montevidéu, Uruguai.", "mission-start": "17/08/2008", "mission-end": " a 19/08/2008", "mission-doc": "RQS 952 / PLENÁRIO DO SENADO FEDERAL"},
+			{"mission-summary": "Participação na XIV Assembléia Ordinária do Parlamento do Mercosul, em Montevidéu, Uruguai.", "mission-start": "03/11/2008", "mission-end": " a 04/11/2008", "mission-doc": "RQS 1255 / PRESIDÊNCIA DO SENADO FEDERAL"},
+			{"mission-summary": "Participação na XVIII Sessão do Parlamento do Mercosul, em Montevidéu, Uruguai.", "mission-start": "18/05/2009", "mission-end": " a 19/05/2009", "mission-doc": "RQS 564 / PLENÁRIO DO SENADO FEDERAL"},
+			{"mission-summary": "Participar da XXII Sessão Plenária do Parlamento do MERCOSUL, em Montevidéu, Uruguai.", "mission-start": "07/03/2010", "mission-end": " a 10/03/2010", "mission-doc": "RQS 136 / PLENÁRIO DO SENADO FEDERAL"},
+			{"mission-summary": "Participar da XXVI Sessão Plenária do Parlamento do Mercosul, na cidade de Montevidéu, Uruguai.", "mission-start": "18/10/2010", "mission-end": " a 19/10/2010", "mission-doc": "RQS 818 / PLENÁRIO DO SENADO FEDERAL"},
+			{"mission-summary": "Comparecer à XXVII Sessão Plenária do Parlamento do Mercosul, na cidade de Montevidéu, Uruguai.", "mission-start": "12/12/2010", "mission-end": " a 14/12/2010", "mission-doc": "RQS 959 / PLENÁRIO DO SENADO FEDERAL"}
+		],
+		"academic-list": [
+			{"course": "1º Grau", "degree": "Primeiro Grau", "institution": "Ginásio São Luiz", "location": "Recife"},
+			{"course": "2º Grau", "degree": "Segundo Grau", "institution": "Colégio Marista", "location": "Recife"},
+			{"course": "Engenharia Mecânica", "degree": "Superior", "institution": "Escola de Engenharia da Universidade Federal de Pernambuco", "location": "Recife"},
+			{"course": "Ciências Econômicas", "degree": "Mestrado", "institution": "Instituto de Ciências Humanas e Sociais da Universidade Federal de Pernambuco", "location": "Recife"},
+			{"course": "Economia do Desenvolvimento", "degree": "Doutorado", "institution": "École Practique dês Hautes Études", "location": "Sorbonne"}
+		],
+		"profession-list": ["Professor(a)"],
+		"past-mandates": [
+			{"mandate-type": "Governador - DF", "mandate-start": "1995", "mandate-end": "1998"},
+			{"mandate-type": "Senador - DF", "mandate-start": "2003", "mandate-end": "2011"},
+			{"mandate-type": "Senador - DF", "mandate-start": "2011", "mandate-end": ""}
+		]
+	}
+}

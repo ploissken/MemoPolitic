@@ -7,7 +7,7 @@
   </tr></thead>
   <tbody>
 	{{#each senatorList.data}}
-		<tr><td><a href="/">{{this.name}}</a></td><td>{{this.party}}</td><td>{{this.state}}</td></tr>
+		<tr><td><a href="/senador/{{this.id}}">{{this.name}}</a></td><td>{{this.party}}</td><td>{{this.state}}</td></tr>
 	{{else}}
 		no data
 	{{/each}}

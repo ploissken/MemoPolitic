@@ -3,8 +3,8 @@ FROM node:9.3.0
 WORKDIR /usr/modafoca
 
 # Install dependencies during build to benefit from cache.
-#COPY package.json package-lock.json ./
-#RUN npm install
+## COPY package.json package-lock.json ./
+## RUN npm install
 
 COPY ./ ./
 

@@ -2,13 +2,25 @@ version: "2"
 services:
     modafoca:
         build: .
-        command: gulp serve
+        # The volume below overrides the COPY commands from the Dockerfile.
+        # So, install node dependencies again before serving.
+        command: bash -c "npm install && node node_modules/gulp/bin/gulp.js serve"
         volumes:
             # Mounts the project directory to update the host with changes made
             # inside the container, such as node_modules/ and package-lock.json
             - './:/usr/modafoca/'
+        links:
+            - db
         ports:
             - 3000:3000
+    queridas:
+        build: ../queridas-aranhas/
+        volumes:
+            - ../queridas-aranhas/:/usr/queridas/
+        links:
+            - db
+        environment:
+            DEBUG: 0
     db:
         image: postgres:10.2-alpine
         restart: always

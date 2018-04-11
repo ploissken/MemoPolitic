@@ -37,6 +37,18 @@ module.exports = function(sequelize, DataTypes) {
                 unique: false
             }
         });
+        model.Senator.belongsToMany(model.Comission, {
+            through: {
+                model: model.SenatorComissions,
+                unique: false
+            }
+        });
+        model.Senator.belongsToMany(model.Project, {
+            through: {
+                model: model.SenatorProjects,
+                unique: false
+            }
+        });
     };
     
 

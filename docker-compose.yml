@@ -9,3 +9,14 @@ services:
             - './:/usr/modafoca/'
         ports:
             - 3000:3000
+    db:
+        image: postgres:10.2-alpine
+        restart: always
+        environment:
+            POSTGRES_DB: fatos
+            PGDATA: /var/lib/postgresql/data/fatos/
+            POSTGRES_PASSWORD: must be changed.
+        ports:
+            - 5432:5432
+        volumes:
+            - /var/lib/postgresql/data/fatos/

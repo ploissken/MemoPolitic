@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const nodemon = require('gulp-nodemon');
-
+const model = require('./model');
 
 gulp.task('serve', function() {
     var server = nodemon({
@@ -19,3 +19,14 @@ gulp.task('serve', function() {
     });
 });
 
+
+gulp.task('db-build', function() {
+    model.sequelize.sync( { force: true })
+        .then(function() {
+            console.log("Banco de Dados criado.");
+            process.exit(0);
+        }).catch(function(error) {
+            console.error("Falha ao criar BD.", error);
+            process.exit(-1);
+        });
+});

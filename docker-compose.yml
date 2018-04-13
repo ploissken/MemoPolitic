@@ -1,6 +1,6 @@
 version: "2"
 services:
-    modafoca:
+    memoria:
         build: .
         # The volume below overrides the COPY commands from the Dockerfile.
         # So, install node dependencies again before serving.
@@ -8,7 +8,7 @@ services:
         volumes:
             # Mounts the project directory to update the host with changes made
             # inside the container, such as node_modules/ and package-lock.json
-            - './:/usr/modafoca/'
+            - './:/usr/memoria-politica/'
         links:
             - db
         ports:

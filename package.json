@@ -1,7 +1,7 @@
 {
-  "name": "modafoca",
-  "version": "0.0.1",
-  "description": "Modafoca server up and running bitch",
+  "name": "memoria-politica",
+  "version": "0.0.2",
+  "description": "Web application for https://memoriapolitica.org/.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

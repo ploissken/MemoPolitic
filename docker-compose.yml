@@ -15,8 +15,10 @@ services:
             - 3000:3000
     queridas:
         build: ../queridas-aranhas/
+        command: bash -c "npm install && /usr/local/bin/aranhas --help"
         volumes:
-            - ../queridas-aranhas/:/usr/queridas/
+            - './:/usr/memoria-politica/'
+            - '../queridas-aranhas/:/usr/queridas/'
         links:
             - db
         environment:

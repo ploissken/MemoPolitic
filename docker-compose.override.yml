@@ -1,0 +1,23 @@
+version: "2"
+
+##
+# Overriden configuration used during Development.
+#                                     ¨¨¨¨¨¨¨¨¨¨¨
+# It is automatically loaded by `docker-compose`, unless `-f` arguments
+# are specified.
+##
+
+services:
+    # Use queridas-aranhas to fetch political information into the same database
+    # in use by memoria-politica.
+    queridas:
+        build: ../queridas-aranhas/
+        command: bash -c "npm install && /usr/local/bin/aranhas --help"
+        volumes:
+            - ../queridas-aranhas/:/usr/queridas/
+            # Gambiarra to avoid duplicated schema source files for now...
+            - ./model/:/usr/queridas/model/
+        links:
+            - db
+        environment:
+            DEBUG: 0

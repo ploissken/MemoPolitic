@@ -8,21 +8,11 @@ services:
         volumes:
             # Mounts the project directory to update the host with changes made
             # inside the container, such as node_modules/ and package-lock.json
-            - './:/usr/memoria-politica/'
+            - ./:/usr/memoria-politica/
         links:
             - db
         ports:
             - 3000:3000
-    queridas:
-        build: ../queridas-aranhas/
-        command: bash -c "npm install && /usr/local/bin/aranhas --help"
-        volumes:
-            - './:/usr/memoria-politica/'
-            - '../queridas-aranhas/:/usr/queridas/'
-        links:
-            - db
-        environment:
-            DEBUG: 0
     db:
         image: postgres:10.2-alpine
         restart: always
@@ -33,4 +23,6 @@ services:
         ports:
             - 5432:5432
         volumes:
-            - /var/lib/postgresql/data/fatos/
+            - fatos:/var/lib/postgresql/data/fatos
+volumes:
+    fatos:
